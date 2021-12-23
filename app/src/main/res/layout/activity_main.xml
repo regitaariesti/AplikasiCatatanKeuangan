@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#809cff"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/icon_form"
+        android:layout_width="255dp"
+        android:layout_height="157dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_forn" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_form"
+        android:layout_width="362dp"
+        android:layout_height="562dp"
+        android:layout_marginTop="148dp"
+        android:background="@drawable/latar_putih"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/judulForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="100dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Formulir Data Keuangan"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:fontFamily="@font/poppins_semibold" />
+
+        <LinearLayout
+            android:id="@+id/tanggal"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/latar_form"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/judulForm">
+
+            <EditText
+                android:id="@+id/etTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:editable="false"
+                android:fontFamily="@font/poppins"
+                android:hint="Masukkan tanggal"
+                android:inputType="none"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/uang"
+            android:layout_width="299dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="29dp"
+            android:background="@drawable/latar_form"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tanggal">
+
+            <EditText
+                android:id="@+id/etUang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="@font/poppins"
+                android:hint="Masukkan jumlah uang"
+                android:inputType="number"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/deskripsi"
+            android:layout_width="299dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/latar_form"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uang">
+
+            <EditText
+                android:id="@+id/etDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins"
+                android:hint="Masukkan deskripsi"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kategori"
+            android:layout_width="303dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deskripsi">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Jenis Transaksi"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/rgKategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbPengeluaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:buttonTint="@color/teal_200"
+                    android:checked="true"
+                    android:fontFamily="@font/poppins"
+                    android:text="Pengeluaran"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/rbPemasukan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Pemasukan"
+                    android:textSize="12sp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prioritas"
+            android:layout_width="300dp"
+            android:layout_height="73dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kategori">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Seberapa penting transaksi ini?"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLabelprioritas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="1" />
+
+                <SeekBar
+                    android:id="@+id/sbPrioritas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_weight="11" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbVerifikasi"
+            android:layout_width="300dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Data yang saya masukkan sudah benar."
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.548"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prioritas" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginBottom="100dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="SUBMIT"
+            app:cornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbVerifikasi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

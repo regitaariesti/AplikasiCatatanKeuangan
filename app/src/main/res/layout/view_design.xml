@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        app:cardBackgroundColor="#B3FAF6F6"
+        card_view:cardCornerRadius="30dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/kategori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pemasukan"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kategori"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/line"
+                app:tint="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/tanggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="21/11/2021"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/line"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/jumlah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="20000"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/line"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/deskripsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regita"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
